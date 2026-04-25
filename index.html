@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Web Gallery Hub — Where Design Meets Creative Intelligence</title>
-<meta name="description" content="Discover stunning web design inspiration, creative portfolios, and digital art galleries. Curated showcase of the world's best creative work.">
-<meta name="keywords" content="web design, creative gallery, design inspiration, digital art, portfolio showcase, UI design, creative intelligence">
+<meta name="description" content="Discover stunning web design inspiration, creative portfolios, and design intelligence resources. Curated galleries for modern designers and creatives.">
+<meta name="keywords" content="web design, creative gallery, design inspiration, portfolio showcase, UI design, creative intelligence, digital art">
 <meta property="og:title" content="Web Gallery Hub — Where Design Meets Creative Intelligence">
-<meta property="og:description" content="Discover stunning web design inspiration, creative portfolios, and digital art galleries. Curated showcase of the world's best creative work.">
+<meta property="og:description" content="Discover stunning web design inspiration, creative portfolios, and design intelligence resources. Curated galleries for modern designers and creatives.">
 <meta property="og:url" content="https://web.gallery">
 <meta property="og:type" content="website">
 <meta property="og:image" content="https://web.gallery/og-image.png">
@@ -223,6 +223,73 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
   .footer-top{grid-template-columns:1fr}
 }
 </style>
+
+  <!-- ═══ SEO: Open Graph ═══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://web.gallery/">
+  <meta property="og:title" content="Web Gallery Hub — Where Design Meets Creative Intelligence">
+  <meta property="og:description" content="Discover stunning web design inspiration, creative portfolios, and design intelligence resources. Curated galleries for modern designers and creatives.">
+  <meta property="og:image" content="https://web.gallery/og-image.jpg">
+  <meta property="og:site_name" content="Web Gallery Hub">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ═══ SEO: Twitter Cards ═══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@web">
+  <meta name="twitter:title" content="Web Gallery Hub — Where Design Meets Creative Intelligence">
+  <meta name="twitter:description" content="Discover stunning web design inspiration, creative portfolios, and design intelligence resources. Curated galleries for modern designers and creatives.">
+  <meta name="twitter:image" content="https://web.gallery/og-image.jpg">
+
+  <!-- ═══ SEO: Additional Meta ═══ -->
+  <meta name="author" content="Web Gallery Hub — Webworks Media Network">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="theme-color" content="#04070f">
+  <link rel="canonical" href="https://web.gallery/">
+
+  <!-- ═══ Security Headers ═══ -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- ═══ Schema.org JSON-LD ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Web Gallery Hub",
+    "url": "https://web.gallery",
+    "description": "Discover stunning web design inspiration, creative portfolios, and design intelligence resources. Curated galleries for modern designers and creatives.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Web Gallery Hub",
+      "url": "https://web.gallery",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://web.gallery/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://web.gallery/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <!-- ═══ Google Analytics 4 ═══ -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', {
+      page_title: 'Web Gallery Hub',
+      page_location: 'https://web.gallery/'
+    });
+  </script>
+
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6620975821265271" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -243,14 +310,135 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
 </nav>
 
 <!-- HERO -->
+
+<!-- ══════════════════════════════════════════════ -->
+<!-- 50/50 BILLBOARD — YouTube + Sponsor CTA       -->
+<!-- ══════════════════════════════════════════════ -->
+<style>
+.billboard{display:grid;grid-template-columns:1fr 1fr;min-height:520px;position:relative;overflow:hidden;background:#020617;border-bottom:1px solid rgba(255,255,255,0.07)}
+.bb-left{position:relative;background:#000;overflow:hidden}
+.bb-left::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(0,245,196,0.08) 0%,transparent 70%);pointer-events:none;z-index:1;animation:bbGlow 4s ease-in-out infinite}
+@keyframes bbGlow{0%,100%{opacity:0.6}50%{opacity:1}}
+.yt-wrapper{position:relative;width:100%;height:100%;min-height:520px}
+.yt-wrapper iframe{position:absolute;inset:0;width:100%;height:100%;border:none;z-index:2}
+.yt-loading{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#020617;z-index:1;gap:1rem}
+.yt-spinner{width:40px;height:40px;border:3px solid rgba(255,255,255,0.07);border-top-color:#00f5c4;border-radius:50%;animation:spin 0.8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.yt-loading p{font-family:'JetBrains Mono',monospace;font-size:0.7rem;color:#6b7a99;letter-spacing:2px}
+.live-badge{position:absolute;top:16px;left:16px;background:#ef4444;color:#fff;padding:0.25rem 0.75rem;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:0.65rem;font-weight:600;letter-spacing:2px;z-index:10;display:flex;align-items:center;gap:6px;box-shadow:0 0 20px rgba(239,68,68,0.5);animation:livePulse 2s ease-in-out infinite}
+@keyframes livePulse{0%,100%{box-shadow:0 0 20px rgba(239,68,68,0.5)}50%{box-shadow:0 0 40px rgba(239,68,68,0.8)}}
+.live-dot{width:7px;height:7px;background:#fff;border-radius:50%;animation:dotBlink 1s ease-in-out infinite}
+@keyframes dotBlink{0%,100%{opacity:1}50%{opacity:0.3}}
+.bb-divider{position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,#00f5c4,#f5a623,transparent);opacity:0.3;z-index:5}
+.bb-right{position:relative;background:#020617;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 2.5rem;text-align:center;overflow:hidden}
+.bb-right::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(245,166,35,0.12) 0%,transparent 70%);pointer-events:none;animation:goldPulse 3s ease-in-out infinite}
+@keyframes goldPulse{0%,100%{transform:scale(1);opacity:0.8}50%{transform:scale(1.1);opacity:1}}
+.bb-right::after{content:'';position:absolute;bottom:-100px;left:-100px;width:300px;height:300px;background:radial-gradient(circle,rgba(0,245,196,0.08) 0%,transparent 70%);pointer-events:none}
+.megaphone-wrap{position:relative;margin-bottom:1.5rem}
+.megaphone-icon{font-size:4rem;display:block;animation:wobble 2s ease-in-out infinite;filter:drop-shadow(0 0 20px rgba(245,166,35,0.6))}
+@keyframes wobble{0%,100%{transform:rotate(-5deg) scale(1)}25%{transform:rotate(5deg) scale(1.05)}50%{transform:rotate(-3deg) scale(0.98)}75%{transform:rotate(4deg) scale(1.03)}}
+.megaphone-halo{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:80px;height:80px;background:radial-gradient(circle,rgba(245,166,35,0.3) 0%,transparent 70%);border-radius:50%;animation:haloExpand 2s ease-in-out infinite}
+@keyframes haloExpand{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:0.8}50%{transform:translate(-50%,-50%) scale(1.5);opacity:0.4}}
+.sponsor-tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;letter-spacing:3px;color:#f5a623;text-transform:uppercase;margin-bottom:0.75rem;display:flex;align-items:center;gap:8px}
+.sponsor-tag::before,.sponsor-tag::after{content:'';height:1px;width:20px;background:#f5a623;opacity:0.5}
+.sponsor-headline{font-family:'Syne',sans-serif;font-size:clamp(1.4rem,3vw,2rem);font-weight:900;line-height:1.1;text-transform:uppercase;letter-spacing:-0.5px;margin-bottom:1rem;color:#e8ecf8}
+.sponsor-headline .hl{background:linear-gradient(90deg,#f5a623,#ffcc44);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sponsor-stats{display:flex;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;justify-content:center}
+.sp-stat .n{font-family:'Syne',sans-serif;font-size:1.4rem;font-weight:900;color:#00f5c4;display:block}
+.sp-stat .l{font-family:'JetBrains Mono',monospace;font-size:0.6rem;color:#6b7a99;letter-spacing:1px}
+.btn-secure{position:relative;background:linear-gradient(135deg,#f5a623,#e8920a);color:#000;padding:1rem 2rem;border-radius:8px;font-family:'Syne',sans-serif;font-size:1rem;font-weight:900;letter-spacing:0.5px;text-decoration:none;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;box-shadow:0 0 30px rgba(245,166,35,0.5),0 0 60px rgba(245,166,35,0.25);animation:secureGlow 3s ease-in-out infinite;transition:transform 0.2s;width:100%;max-width:300px;margin-bottom:0.75rem;overflow:hidden;text-align:center}
+.btn-secure::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.3),transparent);transform:translateX(-100%);animation:secureShimmer 2s infinite}
+@keyframes secureShimmer{to{transform:translateX(100%)}}
+@keyframes secureGlow{0%,100%{box-shadow:0 0 30px rgba(245,166,35,0.5),0 0 60px rgba(245,166,35,0.25)}50%{box-shadow:0 0 50px rgba(245,166,35,0.8),0 0 100px rgba(245,166,35,0.4)}}
+.btn-secure:hover{transform:translateY(-2px) scale(1.01)}
+.bb-adsense{width:100%;max-width:300px;min-height:50px}
+.spots-left{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:#6b7a99;margin-top:0.5rem;display:flex;align-items:center;gap:6px}
+.spots-left::before{content:'';width:6px;height:6px;background:#ef4444;border-radius:50%;animation:dotBlink 1s infinite;flex-shrink:0}
+@media(max-width:768px){
+  .billboard{grid-template-columns:1fr}
+  .bb-left{min-height:220px}
+  .yt-wrapper{min-height:220px}
+  .bb-divider{display:none}
+  .bb-right{padding:2rem 1.5rem}
+}
+</style>
+
+<div class="billboard">
+  <!-- LEFT: YouTube Latest Video -->
+  <div class="bb-left">
+    <div class="live-badge"><div class="live-dot"></div>LATEST VIDEO</div>
+    <div class="yt-wrapper">
+      <div class="yt-loading" id="ytLoading">
+        <div class="yt-spinner"></div>
+        <p>LOADING LATEST VIDEO</p>
+      </div>
+      <div id="ytPlayer"></div>
+    </div>
+  </div>
+
+  <!-- DIVIDER -->
+  <div class="bb-divider"></div>
+
+  <!-- RIGHT: Sponsor CTA -->
+  <div class="bb-right">
+    <div class="megaphone-wrap">
+      <div class="megaphone-halo"></div>
+      <span class="megaphone-icon">📢</span>
+    </div>
+    <div class="sponsor-tag">Premium Advertising</div>
+    <h2 class="sponsor-headline">Your Brand.<br><span class="hl">Their Attention.</span><br>Right Now.</h2>
+    <div class="sponsor-stats">
+      <div class="sp-stat"><span class="n">28K+</span><span class="l">Subscribers</span></div>
+      <div class="sp-stat"><span class="n">94%</span><span class="l">Target Match</span></div>
+      <div class="sp-stat"><span class="n">$12</span><span class="l">CPM Rate</span></div>
+    </div>
+    <a href="acquisition.html" class="btn-secure">🔥 Secure This Spot Now</a>
+    <div class="bb-adsense">
+      <ins class="adsbygoogle" style="display:block;width:100%;min-height:50px" data-ad-client="ca-pub-6620975821265271" data-ad-slot="YOUR_AD_SLOT" data-ad-format="auto" data-full-width-responsive="true"></ins>
+    </div>
+    <div class="spots-left">Only 2 sponsor slots remaining this month</div>
+  </div>
+</div>
+
+<script>
+// YouTube Latest Video Loader
+(function(){
+  var apiKey = 'AIzaSyBVoWllpCQ7Bh-GZuHblnipZYZLiJA7duQ';
+  var channelId = 'UCeJ-0a2SZGZDUXpIX-lCfRg';
+  function loadYT(){
+    fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&channelId='+channelId+'&type=video&order=date&maxResults=1&key='+apiKey)
+    .then(function(r){return r.json()})
+    .then(function(data){
+      var loading = document.getElementById('ytLoading');
+      var player = document.getElementById('ytPlayer');
+      if(loading) loading.style.display='none';
+      if(data.items && data.items.length > 0){
+        var vid = data.items[0].id.videoId;
+        if(player) player.innerHTML='<iframe src="https://www.youtube.com/embed/'+vid+'?autoplay=1&mute=1&rel=0&loop=1&playlist='+vid+'&modestbranding=1" allow="autoplay;encrypted-media;picture-in-picture" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none;z-index:2"></iframe>';
+      }
+    })
+    .catch(function(){
+      var loading = document.getElementById('ytLoading');
+      var player = document.getElementById('ytPlayer');
+      if(loading) loading.style.display='none';
+      if(player) player.innerHTML='<iframe src="https://www.youtube.com/embed?listType=user_uploads&list='+channelId+'&autoplay=1&mute=1" allow="autoplay;encrypted-media" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:none;z-index:2"></iframe>';
+    });
+  }
+  if(document.readyState==='loading'){
+    document.addEventListener('DOMContentLoaded',loadYT);
+  } else { loadYT(); }
+  try{(adsbygoogle=window.adsbygoogle||[]).push({})}catch(e){}
+})();
+</script>
+
 <div class="hero">
-  <div class="hero-eyebrow">🎨 WEB GALLERY & CREATIVE INTELLIGENCE</div>
+  <div class="hero-eyebrow">🎨 DESIGN & CREATIVE INTELLIGENCE</div>
   <h1>
     Curated Design Excellence
     <span class="accent">Creative Intelligence Hub</span>
     <span class="dim">Inspiring Digital Artistry</span>
   </h1>
-  <p class="hero-sub">Explore the world's most innovative web designs and creative portfolios. Your daily source for design inspiration and creative intelligence.</p>
+  <p class="hero-sub">Explore thousands of handpicked web designs and creative portfolios. Fuel your imagination with cutting-edge design intelligence and visual inspiration.</p>
   <div class="hero-cta">
     <a href="#newsletter" class="btn-primary">Explore Gallery</a>
     <a href="#insights" class="btn-ghost">Submit Your Work</a>
@@ -258,15 +446,15 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
   <div class="stats-bar">
     <div class="stat-item"><span class="stat-num">45K+</span><span class="stat-label">Curated Designs</span></div>
     <div class="stat-item"><span class="stat-num">12K+</span><span class="stat-label">Creative Artists</span></div>
-    <div class="stat-item"><span class="stat-num">890K</span><span class="stat-label">Monthly Views</span></div>
-    <div class="stat-item"><span class="stat-num">156</span><span class="stat-label">Countries Reached</span></div>
+    <div class="stat-item"><span class="stat-num">890+</span><span class="stat-label">Daily Submissions</span></div>
+    <div class="stat-item"><span class="stat-num">2.1M</span><span class="stat-label">Monthly Views</span></div>
   </div>
 </div>
 
 <!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker">
-    <span>AI-generated art wins prestigious design award for first time</span> · <span>Minimalist web design trends dominating 2024 portfolios</span> · <span>New CSS features revolutionizing creative web animations</span> · <span>Top agencies share secrets behind viral website designs</span> · <span>Interactive 3D galleries becoming industry standard</span> · <span>Creative intelligence tools reshaping designer workflows</span> · <span>AI-generated art wins prestigious design award for first time</span> · <span>Minimalist web design trends dominating 2024 portfolios</span> · <span>New CSS features revolutionizing creative web animations</span> · <span>Top agencies share secrets behind viral website designs</span> · <span>Interactive 3D galleries becoming industry standard</span> · <span>Creative intelligence tools reshaping designer workflows</span>
+    <span>🏆 Awwwards Site of the Day announced</span> · <span>🎨 Minimalist design trends dominating 2025</span> · <span>💫 AI-generated art galleries gaining traction</span> · <span>🖼️ New portfolio templates released</span> · <span>🌐 WebGL experiences trending globally</span> · <span>✨ Glassmorphism making a comeback</span> · <span>🏆 Awwwards Site of the Day announced</span> · <span>🎨 Minimalist design trends dominating 2025</span> · <span>💫 AI-generated art galleries gaining traction</span> · <span>🖼️ New portfolio templates released</span> · <span>🌐 WebGL experiences trending globally</span> · <span>✨ Glassmorphism making a comeback</span>
   </div>
 </div>
 
@@ -276,10 +464,10 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
     <div class="billboard-inner">
       <div>
         <div class="billboard-badge">PARTNER</div>
-        <h3>Framer — Design That Ships</h3>
-        <p>Used by 50,000+ designers to create stunning websites</p>
+        <h3>Figma — Design Without Limits</h3>
+        <p>The collaborative design tool for modern teams</p>
       </div>
-      <a href="https://framer.com" class="billboard-cta" target="_blank" rel="noopener">Start Free Trial →</a>
+      <a href="https://figma.com" class="billboard-cta" target="_blank" rel="noopener">Try Free →</a>
     </div>
   </div>
 </div>
@@ -297,36 +485,36 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
 </div>
 <!-- CONTENT / INSIGHTS -->
 <section class="section" id="insights">
-  <div class="section-label">FEATURED GALLERIES</div>
-  <h2 class="section-title">Today's Creative Spotlight</h2>
-  <p class="section-sub">Hand-picked designs pushing creative boundaries</p>
+  <div class="section-label">FEATURED SHOWCASES</div>
+  <h2 class="section-title">Design Inspiration & Insights</h2>
+  <p class="section-sub">Handpicked creative excellence from around the world</p>
   <div class="content-grid">
     <a href="#" class="content-card">
-      <div class="card-thumb" style="background:#0a1628">✨</div>
+      <div class="card-thumb" style="background:#0a1628">🎭</div>
       <div class="card-body">
         <div class="card-tag">PORTFOLIO</div>
-        <h3>7 Portfolio Designs That Landed $100K+ Clients</h3>
-        <p>Discover the portfolio strategies top creatives use to attract premium clients and showcase their best work.</p>
+        <h3>Building Immersive 3D Web Experiences</h3>
+        <p>How top agencies are pushing boundaries with WebGL and Three.js to create memorable digital experiences.</p>
       </div>
-      <div class="card-footer"><span>6 min read</span><span>12.4K views</span></div>
+      <div class="card-footer"><span>7 min read</span><span>8.2K views</span></div>
     </a>
     <a href="#" class="content-card">
-      <div class="card-thumb" style="background:#0d1020">🎭</div>
+      <div class="card-thumb" style="background:#1a0d20">🖌️</div>
       <div class="card-body">
-        <div class="card-tag">UI GALLERY</div>
-        <h3>Award-Winning Interface Designs of 2024</h3>
-        <p>Explore the most innovative UI patterns winning design awards this year and learn what makes them stand out.</p>
+        <div class="card-tag">TRENDS</div>
+        <h3>2025 Color Palettes Redefining Digital</h3>
+        <p>Explore the bold, unexpected color combinations transforming web aesthetics this year.</p>
       </div>
-      <div class="card-footer"><span>8 min read</span><span>8.7K views</span></div>
+      <div class="card-footer"><span>5 min read</span><span>6.4K views</span></div>
     </a>
     <a href="#" class="content-card">
-      <div class="card-thumb" style="background:#0a1a12">🖼️</div>
+      <div class="card-thumb" style="background:#0a1a12">⚡</div>
       <div class="card-body">
-        <div class="card-tag">CREATIVE AI</div>
-        <h3>How AI Is Transforming Digital Art Galleries</h3>
-        <p>The intersection of creative intelligence and human artistry is creating entirely new gallery experiences.</p>
+        <div class="card-tag">TECHNIQUE</div>
+        <h3>Micro-Interactions That Convert</h3>
+        <p>Master the subtle animations and feedback loops that elevate user engagement dramatically.</p>
       </div>
-      <div class="card-footer"><span>5 min read</span><span>15.2K views</span></div>
+      <div class="card-footer"><span>6 min read</span><span>5.1K views</span></div>
     </a>
   </div>
 </section>
@@ -334,26 +522,26 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
 <!-- YOUTUBE / VIDEO -->
 <section class="section" id="videos">
   <div class="youtube-section">
-    <div class="section-label">DESIGN TUTORIALS</div>
-    <h2 class="section-title">Master Creative Excellence</h2>
+    <div class="section-label">VIDEO TUTORIALS</div>
+    <h2 class="section-title">Learn From Design Masters</h2>
     <div class="yt-grid">
       <div class="yt-embed">
-        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&rel=0&loop=1&playlist=dQw4w9WgXcQ" allowfullscreen allow="autoplay; encrypted-media" loading="lazy"></iframe>
       </div>
       <div class="yt-playlist">
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="yt-item" target="_blank" rel="noopener">
           <div class="yt-thumb">▶</div>
-          <div class="yt-info"><h4>Building Stunning Portfolio Sites</h4><span>18:42 · 89K views</span></div>
+          <div class="yt-info"><h4>Advanced CSS Grid Layouts</h4><span>18:45 · 124K views</span></div>
         </a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="yt-item" target="_blank" rel="noopener">
           <div class="yt-thumb">▶</div>
-          <div class="yt-info"><h4>Creative Animation Techniques</h4><span>24:15 · 67K views</span></div>
+          <div class="yt-info"><h4>Figma Auto-Layout Deep Dive</h4><span>22:30 · 89K views</span></div>
         </a>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="yt-item" target="_blank" rel="noopener">
           <div class="yt-thumb">▶</div>
-          <div class="yt-info"><h4>AI Tools for Modern Designers</h4><span>31:08 · 124K views</span></div>
+          <div class="yt-info"><h4>Motion Design Principles for Web</h4><span>15:20 · 67K views</span></div>
         </a>
-        <a href="https://www.youtube.com/channel/UCxxxxxx" class="btn-primary" target="_blank" rel="noopener" style="margin-top:0.5rem;text-align:center">Subscribe to Channel →</a>
+        <a href="https://www.youtube.com/channel/UCeJ-0a2SZGZDUXpIX-lCfRg" class="btn-primary" target="_blank" rel="noopener" style="margin-top:0.5rem;text-align:center">Subscribe to Channel →</a>
       </div>
     </div>
   </div>
@@ -362,27 +550,27 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
 <!-- LEAD GENERATION -->
 <section class="section" id="newsletter">
   <div class="lead-section">
-    <div class="lead-badge">FREE — FREE DESIGN INSPIRATION KIT</div>
-    <h2>Weekly Creative Intelligence</h2>
-    <p>Join 28,000+ designers getting curated inspiration every week</p>
+    <div class="lead-badge">FREE — FREE DESIGN TOOLKIT</div>
+    <h2>Weekly Design Inspiration Delivered</h2>
+    <p>Join 28,000+ designers getting curated galleries, trends, and exclusive resources every week.</p>
     <div class="lead-form">
       <input type="text" class="lead-input" id="leadName" placeholder="Your name" style="min-width:160px;flex:0.7">
       <input type="email" class="lead-input" id="leadEmail" placeholder="your@email.com">
       <button class="btn-primary" onclick="handleLead()">Get Inspired Free</button>
     </div>
-    <div class="form-success" id="leadSuccess">✓ Welcome! Check your inbox for this week's creative picks.</div>
+    <div class="form-success" id="leadSuccess">✓ Welcome to the creative community! Check your inbox.</div>
     <div class="lead-magnet">
       <div class="magnet-item">
         <div class="magnet-icon">📚</div>
-        <div><h4>500+ Portfolio Templates</h4><p>Curated collection of stunning portfolio layouts</p></div>
+        <div><h4>UI Component Library</h4><p>500+ ready-to-use design components</p></div>
       </div>
       <div class="magnet-item">
         <div class="magnet-icon">🎨</div>
-        <div><h4>Color Palette Library</h4><p>200 professionally crafted color schemes</p></div>
+        <div><h4>Color Palette Generator</h4><p>AI-powered harmonious color schemes</p></div>
       </div>
       <div class="magnet-item">
-        <div class="magnet-icon">⚡</div>
-        <div><h4>Design Trend Report 2024</h4><p>Comprehensive guide to this year's top trends</p></div>
+        <div class="magnet-icon">📐</div>
+        <div><h4>Layout Templates Pack</h4><p>50 responsive grid templates free</p></div>
       </div>
     </div>
     <p style="font-size:0.72rem;color:var(--muted);margin-top:1.5rem;font-family:var(--mono)">No spam. Unsubscribe anytime. Your data is never sold.</p>
@@ -391,33 +579,33 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
 
 <!-- AFFILIATE TOOLS -->
 <section class="section" id="tools">
-  <div class="section-label">CREATIVE TOOLKIT</div>
-  <h2 class="section-title">Essential Design Tools</h2>
-  <p class="section-sub">Curated tools powering creative professionals worldwide</p>
+  <div class="section-label">CREATIVE TOOLS</div>
+  <h2 class="section-title">Essential Design Stack</h2>
+  <p class="section-sub">Industry-leading tools trusted by creative professionals</p>
   <div class="tools-grid">
     <a href="https://figma.com" target="_blank" rel="noopener" class="tool-card">
       <div class="tool-icon">🎨</div>
-      <div class="tool-info"><h4>Figma</h4><p>Collaborative interface design tool for teams</p><div class="tool-commission">Free + Pro plans</div></div>
+      <div class="tool-info"><h4>Figma</h4><p>Collaborative interface design platform</p><div class="tool-commission">Free + Pro</div></div>
     </a>
-    <a href="https://dribbble.com" target="_blank" rel="noopener" class="tool-card">
-      <div class="tool-icon">🖼️</div>
-      <div class="tool-info"><h4>Dribbble</h4><p>Showcase your work to millions of designers</p><div class="tool-commission">Pro from $5/mo</div></div>
+    <a href="https://framer.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">📸</div>
+      <div class="tool-info"><h4>Framer</h4><p>No-code website builder for designers</p><div class="tool-commission">20% commission</div></div>
     </a>
     <a href="https://webflow.com" target="_blank" rel="noopener" class="tool-card">
-      <div class="tool-icon">✨</div>
-      <div class="tool-info"><h4>Webflow</h4><p>Build stunning websites without code</p><div class="tool-commission">30% commission</div></div>
-    </a>
-    <a href="https://midjourney.com" target="_blank" rel="noopener" class="tool-card">
-      <div class="tool-icon">🎭</div>
-      <div class="tool-info"><h4>Midjourney</h4><p>AI-powered creative image generation</p><div class="tool-commission">From $10/mo</div></div>
-    </a>
-    <a href="https://unsplash.com" target="_blank" rel="noopener" class="tool-card">
-      <div class="tool-icon">📸</div>
-      <div class="tool-info"><h4>Unsplash</h4><p>Beautiful free images for your projects</p><div class="tool-commission">Free + Premium</div></div>
+      <div class="tool-icon">🖼️</div>
+      <div class="tool-info"><h4>Webflow</h4><p>Visual web development platform</p><div class="tool-commission">50% first year</div></div>
     </a>
     <a href="https://spline.design" target="_blank" rel="noopener" class="tool-card">
-      <div class="tool-icon">🔮</div>
-      <div class="tool-info"><h4>Spline</h4><p>Create stunning 3D web experiences</p><div class="tool-commission">Free tier available</div></div>
+      <div class="tool-icon">✨</div>
+      <div class="tool-info"><h4>Spline</h4><p>3D design tool for the web</p><div class="tool-commission">30% commission</div></div>
+    </a>
+    <a href="https://fontshare.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🔤</div>
+      <div class="tool-info"><h4>Fontshare</h4><p>Free quality fonts for designers</p><div class="tool-commission">Free resource</div></div>
+    </a>
+    <a href="https://lottiefiles.com" target="_blank" rel="noopener" class="tool-card">
+      <div class="tool-icon">🎬</div>
+      <div class="tool-info"><h4>Lottie</h4><p>Lightweight animations for web</p><div class="tool-commission">25% commission</div></div>
     </a>
   </div>
 </section>
@@ -442,8 +630,8 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
 <section class="section" id="sponsors">
   <div class="sponsor-section">
     <div class="section-label">ADVERTISE</div>
-    <h2 class="section-title">Reach 45,000+ Creatives</h2>
-    <p class="section-sub">Reach engaged designers and creative professionals actively seeking inspiration and tools</p>
+    <h2 class="section-title">Reach 45,000+ Designers</h2>
+    <p class="section-sub">Reach passionate creatives actively seeking design tools and resources</p>
     <div class="sponsor-grid">
       <div class="sponsor-card">
         <div class="sponsor-tier">Starter</div>
@@ -508,9 +696,9 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       <div class="domain-info">
         <div class="section-label">PREMIUM DOMAIN</div>
         <h2>Own web.gallery</h2>
-        <p>The perfect .gallery domain for showcasing web design and creative work. Instantly memorable and highly brandable for the creative industry.</p>
-        <div class="domain-price">$75,000</div>
-        <div class="domain-price-sub">or lease from $625/month · Financing available</div>
+        <p>Premium .gallery TLD perfectly positioned for the creative industry. Memorable, brandable, and instantly communicates visual excellence and design authority.</p>
+        <div class="domain-price">$35,000</div>
+        <div class="domain-price-sub">or lease from $450/month · Financing available</div>
         <div class="domain-actions">
           <a href="mailto:domains@web.gallery" class="btn-primary">Make an Offer</a>
           <a href="mailto:domains@web.gallery" class="btn-ghost">Inquire About Lease</a>
@@ -545,12 +733,39 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
 <!-- FOOTER -->
+<!-- ═══ PHASE 6: LEGAL FOOTER ═══ -->
 <footer>
+  <div class="footer-legal-bar">
+    <div class="footer-legal-inner">
+
+      <!-- Network Links -->
+      <div class="footer-network">
+        <span class="footer-network-label">Webworks Media Network</span>
+        <div class="footer-network-links">
+          <a href="https://b2b.marketing" target="_blank">B2B.Marketing</a>
+          <a href="https://agentic.press" target="_blank">Agentic.Press</a>
+          <a href="https://genai.work" target="_blank">GenAI.Work</a>
+          <a href="https://quantum.trading" target="_blank">Quantum.Trading</a>
+        </div>
+      </div>
+
+      <!-- Legal Links -->
+      <div class="footer-legal-links">
+        <a href="acquisition.html">Acquisition</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#terms">Terms of Use</a>
+        <a href="#dmca">DMCA</a>
+        <a href="mailto:legal@web.gallery">Legal</a>
+      </div>
+
+    </div>
+  </div>
+
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
         <a href="#" class="logo">web.gallery</a>
-        <p>Curating the world's finest web designs and creative intelligence daily.</p>
+        <p>Curating the world's finest digital design and creative intelligence.</p>
       </div>
       <div class="footer-col">
         <h4>CONTENT</h4>
@@ -589,6 +804,47 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:3rem 2re
       </div>
     </div>
   </div>
+
+  <!-- Legal Statements -->
+  <div class="footer-legal-statements">
+    <p class="footer-copyright">
+      © 2026 Web Gallery Hub (web.gallery) · All rights reserved · ™ Trademark of Webworks Media Network
+    </p>
+    <p class="footer-disclaimer">
+      <strong>Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a commission when you purchase through our links, at no extra cost to you. All recommendations are based on genuine assessment.
+    </p>
+    <p class="footer-disclaimer">
+      <strong>User Content Disclaimer:</strong> User-submitted content on Web Gallery Hub does not necessarily reflect the views of web.gallery or Webworks Media Network. We reserve the right to remove content that violates our community standards.
+    </p>
+    <p class="footer-disclaimer">
+      <strong>Privacy Statement:</strong> We collect only the information you provide voluntarily (email, name). We never sell, share, or rent your personal information to third parties. Your data is stored securely and used only to deliver the content you requested. You may unsubscribe at any time.
+    </p>
+    <p class="footer-disclaimer">
+      <strong>Copyright & DMCA:</strong> All original content on web.gallery is protected by copyright. To report copyright infringement, contact <a href="mailto:dmca@web.gallery">dmca@web.gallery</a>. We respond to all valid DMCA notices within 48 hours.
+    </p>
+    <p class="footer-disclaimer">
+      <strong>General Disclaimer:</strong> Content on Web Gallery Hub is for informational purposes only and does not constitute financial, legal, or professional advice. Always consult a qualified professional before making any decisions based on information found on this site.
+    </p>
+  </div>
+
+<style>
+.footer-legal-bar{background:#020408;border-top:1px solid rgba(255,255,255,0.07);padding:2rem}
+.footer-legal-inner{max-width:1140px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1.5rem}
+.footer-network-label{font-family:'JetBrains Mono',monospace;font-size:0.6rem;letter-spacing:2px;color:#6b7a99;text-transform:uppercase;display:block;margin-bottom:0.5rem}
+.footer-network-links{display:flex;gap:1rem;flex-wrap:wrap}
+.footer-network-links a{font-size:0.78rem;color:#6b7a99;text-decoration:none;transition:color 0.2s}
+.footer-network-links a:hover{color:#00f5c4}
+.footer-legal-links{display:flex;gap:1.5rem;flex-wrap:wrap}
+.footer-legal-links a{font-size:0.75rem;color:#6b7a99;text-decoration:none;transition:color 0.2s}
+.footer-legal-links a:hover{color:#e8ecf8}
+.footer-legal-statements{background:#010306;padding:2rem;text-align:center;border-top:1px solid rgba(255,255,255,0.04)}
+.footer-copyright{font-family:'JetBrains Mono',monospace;font-size:0.72rem;color:#4a5568;margin-bottom:1rem}
+.footer-disclaimer{font-size:0.72rem;color:#3a4555;line-height:1.6;margin-bottom:0.75rem;max-width:900px;margin-left:auto;margin-right:auto}
+.footer-disclaimer strong{color:#4a5568}
+.footer-disclaimer a{color:#6b7a99;text-decoration:none}
+.footer-disclaimer a:hover{color:#00f5c4}
+@media(max-width:768px){.footer-legal-inner{flex-direction:column;align-items:flex-start}}
+</style>
 </footer>
 
 <script>
@@ -636,5 +892,48 @@ document.addEventListener('keypress', e => {
   // Show sticky ad only on wide screens
   if(window.innerWidth > 1400) document.getElementById('stickyAd').style.display = 'block';
 </script>
+
+<!-- ═══ PHASE 8: FLOATING FEEDBACK BUTTON ═══ -->
+<div class="feedback-float" id="feedbackFloat">
+  <button class="feedback-btn" onclick="document.getElementById('feedbackModal').style.display='flex'" title="Send Feedback">
+    💬
+  </button>
+  <span class="feedback-label">Feedback</span>
+</div>
+
+<div class="feedback-modal" id="feedbackModal" style="display:none" onclick="if(event.target===this)this.style.display='none'">
+  <div class="feedback-modal-inner">
+    <button class="feedback-close" onclick="document.getElementById('feedbackModal').style.display='none'">✕</button>
+    <h3>Send Feedback</h3>
+    <p>Help us improve Web Gallery Hub. All feedback goes directly to our team.</p>
+    <form action="https://formspree.io/f/xvzdyoqr" method="POST" onsubmit="document.getElementById('feedbackModal').style.display='none'">
+      <input type="hidden" name="_subject" value="Feedback: web.gallery">
+      <input type="hidden" name="type" value="Site Feedback">
+      <select name="feedback_type" style="width:100%;padding:0.6rem;margin-bottom:0.75rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#e8ecf8;font-size:0.85rem">
+        <option value="bug">🐛 Report a Bug</option>
+        <option value="suggestion">💡 Suggest Enhancement</option>
+        <option value="content">📝 Content Issue</option>
+        <option value="other">💬 General Feedback</option>
+      </select>
+      <textarea name="message" placeholder="Your feedback..." required style="width:100%;padding:0.75rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#e8ecf8;font-size:0.85rem;min-height:100px;resize:vertical;font-family:inherit"></textarea>
+      <input type="email" name="email" placeholder="Your email (optional)" style="width:100%;padding:0.6rem;margin-top:0.5rem;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#e8ecf8;font-size:0.85rem">
+      <button type="submit" style="width:100%;margin-top:0.75rem;padding:0.75rem;background:linear-gradient(135deg,#00f5c4,#00c9a0);color:#000;border:none;border-radius:8px;font-weight:800;font-family:'Syne',sans-serif;cursor:pointer;font-size:0.9rem">Send Feedback</button>
+    </form>
+  </div>
+</div>
+
+<style>
+.feedback-float{position:fixed;bottom:2rem;right:2rem;z-index:500;display:flex;flex-direction:column;align-items:center;gap:4px}
+.feedback-btn{width:48px;height:48px;background:linear-gradient(135deg,#1a2a4a,#2a3a5a);border:1px solid rgba(0,245,196,0.3);border-radius:50%;font-size:1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.4);transition:transform 0.2s,box-shadow 0.2s}
+.feedback-btn:hover{transform:scale(1.1);box-shadow:0 4px 30px rgba(0,245,196,0.3)}
+.feedback-label{font-family:'JetBrains Mono',monospace;font-size:0.55rem;color:#6b7a99;letter-spacing:1px;text-transform:uppercase}
+.feedback-modal{position:fixed;inset:0;background:rgba(0,0,0,0.8);z-index:1000;display:flex;align-items:center;justify-content:center;padding:1rem}
+.feedback-modal-inner{background:#0c1428;border:1px solid rgba(255,255,255,0.1);border-radius:16px;padding:2rem;width:100%;max-width:420px;position:relative}
+.feedback-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:#6b7a99;font-size:1.1rem;cursor:pointer;width:30px;height:30px;display:flex;align-items:center;justify-content:center;border-radius:50%;transition:background 0.2s}
+.feedback-close:hover{background:rgba(255,255,255,0.1)}
+.feedback-modal-inner h3{font-family:'Syne',sans-serif;font-size:1.2rem;font-weight:800;color:#e8ecf8;margin-bottom:0.5rem}
+.feedback-modal-inner p{font-size:0.82rem;color:#6b7a99;margin-bottom:1rem}
+</style>
+
 </body>
 </html>
